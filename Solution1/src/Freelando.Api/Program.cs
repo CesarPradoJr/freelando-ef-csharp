@@ -1,10 +1,17 @@
 using Freelando.Api.Endpoints;
+using Freelando.Dados;
+using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<FreelandoContext>((options) =>
+{
+    options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"]);
+});
 
 var app = builder.Build();
 
@@ -16,6 +23,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.AddEndPointEspecialidades();
+app.AddEndPointProfissional();
+app.AddEndPointProjeto();
 app.UseHttpsRedirection();
 
 app.Run();

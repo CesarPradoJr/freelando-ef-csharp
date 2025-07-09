@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Freelando.Api", "src\Freela
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Freelando.Modelos", "src\Freelando.Modelos\Freelando.Modelos.csproj", "{4825280D-E079-4E62-93FC-3407836CABAD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Freelando.Dados", "src\Freelando.Dados\Freelando.Dados.csproj", "{35963988-CE0F-4C89-8801-BE7649F34BBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{4825280D-E079-4E62-93FC-3407836CABAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4825280D-E079-4E62-93FC-3407836CABAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4825280D-E079-4E62-93FC-3407836CABAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35963988-CE0F-4C89-8801-BE7649F34BBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35963988-CE0F-4C89-8801-BE7649F34BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35963988-CE0F-4C89-8801-BE7649F34BBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35963988-CE0F-4C89-8801-BE7649F34BBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
