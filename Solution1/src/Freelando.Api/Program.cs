@@ -25,6 +25,10 @@ if (app.Environment.IsDevelopment())
 app.AddEndPointEspecialidades();
 app.AddEndPointProfissional();
 app.AddEndPointProjeto();
+app.AddEndPointContrato();
+app.AddEndPointCandidatura();
+app.AddEndPointServico();
+
 app.UseHttpsRedirection();
 
 app.Run();
