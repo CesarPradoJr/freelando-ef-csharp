@@ -10,13 +10,16 @@ namespace Freelando.Modelo;
 public class Contrato
 {
     private Contrato() { }
-    public Contrato(Guid id, double? valor, Vigencia vigencia)
+    public Contrato(Guid id, double? valor, Vigencia vigencia, Servico servico)
     {
         Id = id;
         Valor = valor;
         Vigencia = vigencia;
+        Servico = servico;
     }
     public Guid Id { get; set; }
     public double? Valor { get; set; }
     public Vigencia? Vigencia { get; set; }
+    public Servico Servico { get; set; }
+    public Guid ServicoId { get; set; }
 }
