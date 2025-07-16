@@ -68,9 +68,3 @@ As seguintes ferramentas foram usadas na construção e manutenção do projeto:
 - [SQL Management Studio](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16) - Ferramenta para manipulação do banco de dados.
 - [Swagger](https://swagger.io/) - Documentação da API
 
-## ✒️ Colaborador(as/es)
-
-- **Jeniffer Bittencourt** - _Desenvolvedora_  - [jeniblodev ](https://github.com/jeniblodev)
-- **André Bessa da Silva** - _Desenvolvedor_  - [bessax](https://github.com/bessax)
-- **Daniel Portugal** - _Desenvolvedor_  - [dpcosta](https://github.com/dpcosta)
-
