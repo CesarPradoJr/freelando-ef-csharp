@@ -6,24 +6,27 @@ namespace Freelando.Api.Converters;
 
 public class ContratoConverter
 {
+    private ServicoConverter _servicoConvert;
     public ContratoResponse EntityToResponse(Contrato? contrato)
     {
+        _servicoConvert = new ServicoConverter();
         if (contrato == null)
         {
-            return new ContratoResponse(Guid.Empty, 0.0, null);
+            return new ContratoResponse(Guid.Empty, 0.0, null, Guid.Empty);
         }
 
-        return new ContratoResponse(contrato.Id, contrato.Valor, contrato.Vigencia);
+        return new ContratoResponse(contrato.Id, contrato.Valor, contrato.Vigencia, contrato.ServicoId);
     }
 
     public Contrato RequestToEntity(ContratoRequest? contratoRequest)
     {
+        _servicoConvert = new ServicoConverter();
         if (contratoRequest == null)
         {
-            return new Contrato(Guid.Empty, 0.0, null);
+            return new Contrato(Guid.Empty, 0.0, null, null);
         }
 
-        return new Contrato(contratoRequest.Id, contratoRequest.Valor, contratoRequest.Vigencia);
+        return new Contrato(contratoRequest.Id, contratoRequest.Valor, contratoRequest.Vigencia, _servicoConvert.RequestToEntity(contratoRequest.Servico));
     }
 
     public ICollection<ContratoResponse> EntityListToResponseList(IEnumerable<Contrato> contratos)

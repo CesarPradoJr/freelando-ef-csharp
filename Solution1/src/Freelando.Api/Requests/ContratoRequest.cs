@@ -2,4 +2,4 @@
 
 namespace Freelando.Api.Requests;
 
-public record ContratoRequest(Guid Id, double? Valor, Vigencia Vigencia);
+public record ContratoRequest(Guid Id, double? Valor, Vigencia Vigencia, ServicoRequest Servico);

@@ -19,5 +19,7 @@ internal class ContratoTypeConfiguration : IEntityTypeConfiguration<Contrato>
             vigencia.Property(v => v.DataInicio).HasColumnName("Data_Inicio");
             vigencia.Property(v => v.DataEncerramento).HasColumnName("Data_Encerramento");
         });
+        entity.HasOne(e => e.Servico).WithOne(e => e.Contrato).HasForeignKey<Contrato>(e => e.Id);
+        entity.Property(e => e.ServicoId).HasColumnName("ID_Servico");
     }
 }
