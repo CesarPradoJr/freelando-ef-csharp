@@ -15,7 +15,5 @@ internal class ProjetoEspecialidadeTypeConfiguration : IEntityTypeConfiguration<
         entity.ToTable("TB_Especialidade_Projeto");
         entity.Property(e => e.ProjetoId).HasColumnName("Id_Projeto");
         entity.Property(e => e.EspecialidadeId).HasColumnName("Id_Especialidade");
-
-
     }
 }

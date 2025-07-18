@@ -1,4 +1,5 @@
 ﻿using Freelando.Modelo;
+using Freelando.Modelos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -14,5 +15,9 @@ internal class ProfissionalTypeConfiguration : IEntityTypeConfiguration<Profissi
     {
         entity.ToTable("TB_Profissionais");
         entity.Property(e => e.Id).HasColumnName("Id_Profissional");
+        entity.HasMany(e => e.Especialidades).WithMany(e => e.Profissionais).UsingEntity<ProfissionalEspecialidade>(
+            l => l.HasOne<Especialidade>(e => e.Especialidades).WithMany(e => e.ProfissionaisEspecialidades).HasForeignKey(e => e.EspecialidadeId),
+            r => r.HasOne<Profissional>(e => e.Profissionais).WithMany(e => e.ProfissionaisEspecialidades).HasForeignKey(e => e.ProfissionalId)
+            );
     }
 }
