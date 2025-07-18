@@ -17,6 +17,7 @@ builder.Services.AddDbContext<FreelandoContext>((options) =>
 builder.Services.AddScoped<ProjetoConverter>();
 builder.Services.AddScoped<ClienteConverter>();
 builder.Services.AddScoped<ContratoConverter>();
+builder.Services.AddScoped<ServicoConverter>();
 
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
