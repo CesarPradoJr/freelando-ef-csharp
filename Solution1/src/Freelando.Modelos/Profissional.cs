@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Freelando.Modelos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,13 +8,15 @@ using System.Threading.Tasks;
 namespace Freelando.Modelo;
 public class Profissional
 {
-    public Profissional(Guid id, string? nome, string? cpf, string? email, string? telefone)
+    public Profissional() { }
+    public Profissional(Guid id, string? nome, string? cpf, string? email, string? telefone, ICollection<Especialidade> especialidades)
     {
         Id = id;
         Nome = nome;
         Cpf = cpf;
         Email = email;
         Telefone = telefone;
+        Especialidades = especialidades;
     }
 
     public Guid Id { get; set; }
@@ -21,5 +24,7 @@ public class Profissional
     public string? Cpf { get; set; }
     public string? Email { get; set; }
     public string? Telefone { get; set; }
+    public ICollection<Especialidade> Especialidades { get; set; }
+    public ICollection<ProfissionalEspecialidade> ProfissionaisEspecialidades { get; set; } = [];
 
 }
