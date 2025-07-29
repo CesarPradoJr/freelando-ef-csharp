@@ -20,6 +20,7 @@ builder.Services.AddScoped<ContratoConverter>();
 builder.Services.AddScoped<ServicoConverter>();
 builder.Services.AddScoped<CandidaturaConverter>();
 builder.Services.AddScoped<ProfissionalConverter>();
+builder.Services.AddScoped<EspecialidadeConverter>();
 
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
