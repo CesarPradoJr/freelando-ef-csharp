@@ -43,6 +43,7 @@ app.AddEndPointContrato();
 app.AddEndPointCandidatura();
 app.AddEndPointServico();
 app.AddEndPointClientes();
+app.AddEndPointRelatorios();
 
 app.UseHttpsRedirection();
 
